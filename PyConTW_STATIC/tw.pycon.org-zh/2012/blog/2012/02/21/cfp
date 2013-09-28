@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/site_media/static/img/favicon.ico" rel="shortcut icon" />
+        <title>徵求講題 / PyCon Taiwan 2012</title>
+        <!--  hack to make IE able to apply CSS to elements that it doesn't usually know about. See http://code.google.com/p/html5shim/ -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <link rel="stylesheet" href="/site_media/static/css/facebox.css" />
+        <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css">
+        <link href="/site_media/static/markitup/skins/simple/style.css" type="text/css" media="screen" rel="stylesheet" />
+<link href="/site_media/static/markitup/sets/markdown-custom/style.css" type="text/css" media="screen" rel="stylesheet" />
+
+        
+        
+    
+    <link rel="stylesheet" href="/site_media/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/site_media/static/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="/site_media/static/css/custom.css" />
+    <link rel="alternate" type="application/atom+xml" href="/2012/feed/general/" title="blog feed"/>
+    
+
+    </head>
+
+    <body class="blog " id="">
+
+        <div class="container">
+
+
+            <header>
+                <div class="container">
+                    <div>
+                        
+
+<div class="account-bar">
+    <a href="/" style="font-size: 18px; vertical-align: top; height: 20px;">前往最新的 PyCon Taiwan 年會 <img width="24px" src="/site_media/static//img/big-arrow-th.png"></a>
+</div>
+<div class="clear"></div>
+
+                    </div>
+
+                    
+
+                    <div class="row">
+                        <div class="span5">
+                            <a href="/"><img src="/site_media/static/img/logo2.png" /></a>
+                        </div>
+                        <div class="span7">
+                            <div id="head-desc">
+                            <div class="date">六月9日 ~ 六月10日</div>
+                            <div class="address">中央研究院人文社會館</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="">
+                        <a href="/2012/" id="link-about">首頁</a>
+                    </li>
+                    <li class="">
+                        <a href="/2012/about/" id="link-about">關於</a>
+                    </li>
+                    <li class="">
+                        <a href="/2012/program/" id="link-program">議程</a>
+                    </li>
+                    <li class="">
+                        <a href="/2012/speaker/" id="link-speakers">講者</a>
+                    </li>
+                    <li class="">
+                        <a href="/2012/registration/" id="link-registration">註冊</a>
+                    </li>
+                    <li class="">
+                        <a href="/2012/venue/" id="link-venue">地點</a>
+                    </li>
+                    <li class="">
+                        <a href="/2012/sponsors/" id="link-sponsors">贊助商</a>
+                    </li>
+                    <li class="active">
+                        <a href="/2012/blog/" id="link-blog">部落格</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                    
+                </div>
+            </header>
+
+            <section id="subnav">
+                <div class="container">
+                    
+                </div>
+            </section>
+
+            
+                
+                <section id="body">
+                    <div class="container">
+
+                        
+    
+<div class="row">
+    <div class="span3">
+        <h1 class="section-title"><span>部落格</span></h1>
+        
+
+
+
+    </div>
+    <div class="span9">
+        
+    <div class="blog-post">
+        <h1>徵求講題</h1>
+        <p class="post_dateline">
+    <span class="date">2012.02.21</span>
+    by <span class="author">marr</span>
+</p>
+
+
+        <div class="teaser"><p>即日起公開徵求講題，歡迎社群同好踴躍投稿。</p></div>
+
+        <div class="content"><h1>重要日期</h1>
+<ul>
+<li>二月15日 : 徵求講題開始收件</li>
+<li>四月02日 : 講題提案投稿截止</li>
+<li>四月12日 : 提案審核結果公告</li>
+<li>四月15日 : 開放報名</li>
+<li>四月30日 : 早鳥優惠截止</li>
+<li>五月31日 : 完整版本的投影檔案及論文摘要上傳</li>
+<li>六月01日 : 報名截止</li>
+<li>六月09日 - 10日 : 2012 台灣 Python 年會舉辦兩天</li>
+</ul>
+<h1>主題範圍</h1>
+<p>2012 台灣 Python 年會徵求各式領域應用 Python 的案例分析或經驗心得，以下列舉僅是合適的主題範例，不代表只侷限於這些主題：</p>
+<ul>
+<li>Web Programming (e.g Django, Pyramid, Web2Py, TurboGears)</li>
+<li>Cloud Computing</li>
+<li>Scientific Computing</li>
+<li>Python in Business, Education and Maths</li>
+<li>Agile Development and Project Best Practices</li>
+<li>Game Programming</li>
+<li>GUI Programming</li>
+<li>Network Programming</li>
+<li>Packaging Issues</li>
+<li>Programming Tools</li>
+<li>Python Libraries and Extensions</li>
+<li>System Administration</li>
+<li>Python Implementations: IronPython, Jython, PyPy and Stackless.</li>
+</ul>
+<h1>提案上傳</h1>
+<p>提案或演講的主要內容，限用中文或英文進行說明，上傳時並請選定演講的主要語言。一個講題提案，可以由多位講者共同發表，但必須由主要講者 (primary presenter) 執行上傳工作，並至少提供下列的提案資訊，以便議程委員於審稿期間，提供適當的協助，並擬定最佳的議程安排：</p>
+<ul>
+<li>講題標題</li>
+<li>演講類型 (一般演講 或 閃電秀)</li>
+<li>主要語言 (中文 或 英文)</li>
+<li>主題類型</li>
+<li>聽眾對象</li>
+<li>講題描述 (至少150字)</li>
+<li>講題摘要 (最多200字)</li>
+<li>同意你的演講進行錄影並公開在 PyCon Taiwan 網站</li>
+<li>同意你的投影檔案在 PyCon Taiwan 網站公開下載</li>
+<li>附註說明 (例如你的工作介紹或使用 Python 的歷史)</li>
+</ul>
+<p>請參考<a href="https://lh5.googleusercontent.com/-4_49EV-l0tc/TzoxG9E_DPI/AAAAAAAADSI/REBohdjlw0Y/s800/proposal-sample.png" title="Proposal Sample">提案範本</a>以了解上傳時需要填寫的欄位資訊，並從 <a href="http://tw.pycon.org/2012/speaker">http://tw.pycon.org/2012/speaker</a> 網址進行上傳動作。</p>
+<h1>投影檔案/論文摘要 上傳方式</h1>
+<p>提案審核通過後，就可以上傳完整的投影檔案，或是論文摘要。'</p>
+<h2>投影檔案上傳</h2>
+<p>請善用投影檔案的註釋欄位，盡量提供相關的解說訊息，以便聽眾或讀者更容易理解內容。並從 <a href="http://tw.pycon.org/2012/speaker">http://tw.pycon.org/2012/speaker</a> 網址進行上傳動作。</p>
+<h2>論文摘要上傳</h2>
+<p>講者如果想要上傳短篇論文 (short paper) 或是延伸摘要 (extended abstract)，本屆 PyCon Taiwan 將協助在 <a href="http://ojs.pythonpapers.org/index.php/tppm">The Python Papers Monograph</a> 建立研討會論文集 (unrefereed volume 不包括投影檔案)，請上傳 10 頁以內的論文檔案，並使用 PDF 或 LibreOffice Write 格式的檔案，從 <a href="http://tw.pycon.org/2012/speaker">http://tw.pycon.org/2012/speaker</a> 網址進行上傳動作。</p>
+<p>對於上傳論文摘要的講者，PyCon Taiwan 會後將另行邀稿，上傳完整的論文 (包括摘要、簡介、內文、結論等)，經過同儕評審後，在 <a href="http://www.pythonpapers.org/">The Python Papers</a> 發表出版。</p></div>
+    </div>
+
+    </div>
+</div>
+
+
+
+                    </div>
+
+                </section>
+            
+
+        <footer>
+            <p>協辦單位 <br/>
+<a href="http://www.openfoundry.org/"><img src="http://tw.pycon.org/site_media/media/images/2012/05/01/OSSF.png" border="0"/></a>
+ </p>
+            <hr />
+            <div class="container">
+    <div id="setlanguage">
+        <form action="/2012/i18n/setlang/" method="post"><div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='a47ef45ce707ccaf04adfb0132073cd0' /></div>
+            <span>Language&nbsp;&nbsp;</span>
+            <input name="next" type="hidden" value="/2012/blog/2012/02/21/cfp/" />
+            <select name="language">
+            
+                <option value="en">English</option>
+            
+                <option value="zh-tw" selected="selected">Traditional Chinese</option>
+            
+            </select>
+            <input type="submit" value="Go" />
+        </form>
+    </div>
+
+    <p>
+        PyCon Taiwan 2012 built with <a href="http://djangoproject.com">Django</a> and <a href="http://pinaxproject.com">Pinax</a>. Hosting provided by <a href="http://streetvoice.com">StreetVoice</a>.
+    <br />
+        Questions? Comments? Contact <a href="mailto:organizers@pycon.tw">organizers@pycon.tw</a>
+    </p>
+
+
+</div>
+        </footer>
+        </div>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="/site_media/static/js/base.js" type="text/javascript"></script>
+        <script src="/site_media/static/js/bootstrap.js" type="text/javascript"></script>
+        <script src="/site_media/static/uni_form/uni-form.jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/site_media/static/markitup/jquery.markitup.js"></script>
+        <script type="text/javascript" src="/site_media/static/markitup/sets/markdown-custom/set.js"></script>
+        <script src="/site_media/static/js/facebox.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('a[rel*=facebox]').facebox({
+            loadingImage: '/site_media/static/img/facebox/loading.gif',
+            closeImage: '/site_media/static/img/facebox/closelabel.png'
+        });
+        $(document).bind('reveal.facebox', function() {
+            $("form.in_facebox").submit(function() {
+                form = this;
+                jQuery.facebox(function($) {
+                    fields = jQuery(form).find("input[type='text']").filter(":enabled");
+                    params = {}
+                    fields.each(function() {
+                        params[this.name] = this.value;
+                    });
+                    jQuery.post(form.action, params,
+                        function(data, textStatus) {
+                            jQuery.facebox(data);
+                        }
+                    );
+                });
+                return false;
+            });
+        });
+        $(document).bind('close.facebox', function() {
+           location.reload();
+          });
+     });
+</script>
+        <script type="text/javascript" charset="utf-8">
+            $(document).ajaxSend(function(event, xhr, settings) {
+                function getCookie(name) {
+                    var cookieValue = null;
+                    if (document.cookie && document.cookie != '') {
+                        var cookies = document.cookie.split(';');
+                        for (var i = 0; i < cookies.length; i++) {
+                            var cookie = jQuery.trim(cookies[i]);
+                            // Does this cookie string begin with the name we want?
+                            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                break;
+                            }
+                        }
+                    }
+                    return cookieValue;
+                }
+                function sameOrigin(url) {
+                    // url could be relative or scheme relative or absolute
+                    var host = document.location.host; // host + port
+                    var protocol = document.location.protocol;
+                    var sr_origin = '//' + host;
+                    var origin = protocol + sr_origin;
+                    // Allow absolute or scheme relative URLs to same origin
+                    return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+                        (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+                        // or any other URL that isn't scheme relative or absolute i.e relative.
+                        !(/^(\/\/|http:|https:).*/.test(url));
+                }
+                function safeMethod(method) {
+                    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+                }
+
+                if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
+                    xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                }
+            });
+        </script>
+        
+        <script type="text/javascript">
+            $(document).ready(function($) {
+                $("a.boxes-edit-link").click(function() {
+                    $.facebox.settings.loadingImage = "/site_media/static/img/loading.gif";
+                    $.facebox.settings.closeImage = "/site_media/static/img/closelabel.png";
+                    $(document).bind("beforeReveal.facebox", function() {
+                        $("#facebox .content").css("width", "600px");
+                    });
+                    var editable = this;
+                    $(document).bind("reveal.facebox", function() {
+                        $("#edit_form").submit(function() {
+                            $.post(editable.href, $(this).serialize(), function(data) {
+                                $(document).trigger("close.facebox");
+                                $(editable).load(data);
+                                $(document).unbind("reveal.facebox");
+                            });
+                            return false;
+                        });
+                    });
+                    $.facebox({ajax: this.href});
+                    return false;
+                });
+            });
+        </script>
+        
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28961467-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+    // _gaq.push(['_setCustomVar', 1, 'Authentication Type', ut, 2]);
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+        
+        
+    <script type="text/javascript" charset="utf-8">
+      $(function(){
+          $("#id_email").focus();
+          $(function () {
+              if(('ul#messages').length > 0) {
+                  setTimeout(function() {
+                      $('ul#messages').fadeOut(3000);
+                  }, 2000 );
+              }
+          });
+      });
+    </script>
+    
+
+    </body>
+</html>
