@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Pymacs 初體驗</title>
+<!-- 2013-05-19 Sun 01:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="author" content="Superbil &lt;superbil@gmail.com&gt;"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Pymacs 初體驗</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. about me</a></li>
+<li><a href="#sec-2">2. 什麼是 emacs</a>
+<ul>
+<li><a href="#sec-2-1">2.1. emacs 基本介紹</a></li>
+<li><a href="#sec-2-2">2.2. emacs vs Vi(m)</a></li>
+<li><a href="#sec-2-3">2.3. use python in emacs</a></li>
+<li><a href="#sec-2-4">2.4. res</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. 為什麼要用 Emacs</a></li>
+<li><a href="#sec-4">4. Python in Emacs</a></li>
+<li><a href="#sec-5">5. How to install Pymacs</a>
+<ul>
+<li><a href="#sec-5-1">5.1. install from source</a></li>
+<li><a href="#sec-5-2">5.2. install from elpa</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Pymacs 的運作原理</a>
+<ul>
+<li><a href="#sec-6-1">6.1. exec</a></li>
+<li><a href="#sec-6-2">6.2. pppp</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Pymacs 的簡單應用</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Emacs side</a>
+<ul>
+<li><a href="#sec-7-1-1">7.1.1. pymacs-exec</a></li>
+<li><a href="#sec-7-1-2">7.1.2. pymacs-eval</a></li>
+<li><a href="#sec-7-1-3">7.1.3. pymacs-call</a></li>
+<li><a href="#sec-7-1-4">7.1.4. pymacs-apply</a></li>
+<li><a href="#sec-7-1-5">7.1.5. pymacs-load</a></li>
+<li><a href="#sec-7-1-6">7.1.6. pymacs-autoload</a></li>
+</ul>
+</li>
+<li><a href="#sec-7-2">7.2. Python side</a>
+<ul>
+<li><a href="#sec-7-2-1">7.2.1. hello world</a></li>
+<li><a href="#sec-7-2-2">7.2.2. (pymacs-eval "lisp('(pymacs-eval \"repr(2L**111)\")')")</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-8">8. 可能會遇到的問題</a>
+<ul>
+<li><a href="#sec-8-1">8.1. Death from a Ctrl-C</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9. 到那邊問問題或是資源？</a></li>
+<li><a href="#sec-10">10. Q&amp;A</a></li>
+<li><a href="#sec-11">11. ref</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> about me</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+軟體工程師，PyHUG 主持人
+</p>
+
+<p>
+Emacs 使用經驗大約 1 年
+</p>
+
+<ul class="org-ul">
+<li><a href="http://about.me/superbil">about.me</a>
+</li>
+<li>@superbil
+</li>
+<li>freenode #python.tw
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 什麼是 emacs</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> emacs 基本介紹</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>emacs tutorial
+ctrl + h t
+</li>
+<li>ctrl + {b,n,p,f}
+hjkl
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> emacs vs Vi(m)</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+其實這是個陳年老問題…
+</p>
+
+<p>
+沒有好或不好，只有合不合用
+</p>
+
+<ul class="org-ul">
+<li>
+<div class="figure">
+<p><img src="images/emacs_on_server.png"  alt="emacs_on_server.png"/></p>
+</div>
+
+<p>
+from <a href="http://sachachua.com/blog/2013/05/how-to-learn-emacs-a-hand-drawn-one-pager-for-beginners/">How to Learn Emacs: A Hand-drawn One-pager for Beginners</a>
+</p>
+</li>
+
+<li>sublime text 個人因為看不到 code，所以…
+
+<p>
+&lt;del&gt;其實是因為要付錢的關係&lt;/del&gt;
+</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> use python in emacs</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+<a href="https://github.com/jorgenschaefer/elpy">elpy</a>
+</p>
+
+<ul class="org-ul">
+<li>quick install
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'package-archives
+             '(<span style="color: #259185;">"marmalade"</span> .
+               <span style="color: #259185;">"http://marmalade-repo.org/packages/"</span>))
+(require-package 'elpy)
+(package-initialize)
+(elpy-enable)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> res</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li><a href="http://wuyang.yangsheep.net/emacs_tour.html">http://wuyang.yangsheep.net/emacs_tour.html</a>
+<ul class="org-ul">
+<li>Google Maps for emacs
+</li>
+<li>Google Weather
+</li>
+<li>Rainbow mode
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 為什麼要用 Emacs</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+you can hack it!
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Python in Emacs</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<a href="https://github.com/pinard/Pymacs">Pymacs - Github</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> How to install Pymacs</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> install from source</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Pymacs v2.5.0
+</p>
+<ul class="org-ul">
+<li>get source code
+     <a href="https://github.com/pinard/Pymacs/">pinard/Pymacs · GitHub</a>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-sh">python setup.py install
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> install from elpa</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+M-x package-install RET pymacs RET
+</p>
+
+<ul class="org-ul">
+<li>安裝時要注意到的問題
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Pymacs 的運作原理</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> exec</h3>
+</div>
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> <a href="http://pymacs.progiciels-bpi.ca/pppp.html">pppp</a></h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Poor's Python Pre-Processor
+use for Pymacs to Python 3
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Pymacs 的簡單應用</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Emacs side</h3>
+<div class="outline-text-3" id="text-7-1">
+</div><div id="outline-container-sec-7-1-1" class="outline-4">
+<h4 id="sec-7-1-1"><span class="section-number-4">7.1.1</span> pymacs-exec</h4>
+</div>
+
+<div id="outline-container-sec-7-1-2" class="outline-4">
+<h4 id="sec-7-1-2"><span class="section-number-4">7.1.2</span> pymacs-eval</h4>
+<div class="outline-text-4" id="text-7-1-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(pymacs-eval <span style="color: #259185;">"609+10"</span>)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7-1-3" class="outline-4">
+<h4 id="sec-7-1-3"><span class="section-number-4">7.1.3</span> pymacs-call</h4>
+</div>
+<div id="outline-container-sec-7-1-4" class="outline-4">
+<h4 id="sec-7-1-4"><span class="section-number-4">7.1.4</span> pymacs-apply</h4>
+</div>
+<div id="outline-container-sec-7-1-5" class="outline-4">
+<h4 id="sec-7-1-5"><span class="section-number-4">7.1.5</span> pymacs-load</h4>
+</div>
+<div id="outline-container-sec-7-1-6" class="outline-4">
+<h4 id="sec-7-1-6"><span class="section-number-4">7.1.6</span> pymacs-autoload</h4>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Python side</h3>
+<div class="outline-text-3" id="text-7-2">
+</div><div id="outline-container-sec-7-2-1" class="outline-4">
+<h4 id="sec-7-2-1"><span class="section-number-4">7.2.1</span> hello world</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #728a05;">from</span> Pymacs <span style="color: #728a05;">import</span> lisp
+<span style="color: #a57705;">interactions</span> = {}
+
+<span style="color: #728a05;">def</span> <span style="color: #2075c7;">hello_world</span>():
+<span style="background-color: #0a2832;"> </span>   <span style="color: #259185;">"Hello world' from Python."</span>
+<span style="background-color: #0a2832;"> </span>   lisp.insert(<span style="color: #259185;">"Hello from Python!"</span>)
+<span style="color: #a57705;">interactions</span>[hello_world] = <span style="color: #259185;">''</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7-2-2" class="outline-4">
+<h4 id="sec-7-2-2"><span class="section-number-4">7.2.2</span> (pymacs-eval "lisp('(pymacs-eval \"repr(2L**111)\")')")</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> 可能會遇到的問題</h2>
+<div class="outline-text-2" id="text-8">
+</div><div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Death from a Ctrl-C</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+M-x pymacs-eval RET lisp.kbd('C-c r r') RET
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> 到那邊問問題或是資源？</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li><a href="http://www.emacswiki.org/emacs/">Emacswiki.org</a>
+</li>
+<li><a href="http://stackoverflow.com/">stackoverflow.com</a>
+</li>
+<li><a href="https://plus.google.com/communities/114815898697665598016">Emacs on Google Plus</a>
+</li>
+<li><a href="http://webchat.freenode.net/?channels=emacs.tw">freenode#emacs.tw</a>
+</li>
+<li><a href="http://planet.emacsen.org/">planet.emacsen.org</a>
+</li>
+<li><a href="http://www.reddit.com/r/emacs">reddit.com/r/emacs</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Q&amp;A</h2>
+</div>
+
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> ref</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li><a href="http://ergoemacs.org/emacs/emacs24_features.html">New Features in Emacs 24</a>
+</li>
+<li><a href="http://pymacs.progiciels-bpi.ca/pymacs.html#emacs-lisp-structures-and-python-objects">Pymacs 0.25 documention and examples</a>
+</li>
+<li><a href="https://github.com/technomancy/emacs-starter-kit">emacs-starter-kit</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Superbil &lt;superbil@gmail.com&gt;</p>
+<p class="date">Created: 2013-05-19 Sun 01:29</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.1 (<a href="http://orgmode.org">Org</a> mode 8.0.3)</p>
+<p class="xhtml-validation"><a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a></p>
+</div>
+</body>
+</html>
