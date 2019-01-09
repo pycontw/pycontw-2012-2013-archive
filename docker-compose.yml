@@ -1,0 +1,10 @@
+version: '3'
+services:
+    pycontw-archive:
+        build: ./nginx
+        container_name: pycontw-archive
+        hostname: pycontw-archive
+        volumes:
+            - ./data:/var/www
+        ports:
+            - 8012:80
