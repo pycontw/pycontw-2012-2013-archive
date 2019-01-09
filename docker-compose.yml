@@ -8,3 +8,8 @@ services:
             - ./data:/var/www
         ports:
             - 8012:80
+
+networks:
+    default:
+        external:
+            name: pycontw-net
