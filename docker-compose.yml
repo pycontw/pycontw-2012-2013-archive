@@ -2,6 +2,7 @@ version: '3'
 services:
     pycontw-2012-2013:
         build: ./nginx
+        restart: always
         container_name: pycontw-2012-2013
         hostname: pycontw-2012-2013
         volumes:
